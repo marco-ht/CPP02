@@ -59,6 +59,7 @@ All exercises must be written in **C++98** and compiled using the appropriate fl
   - Avoid memory leaks when using `new` / `delete`
   - Each header must be self-contained and protected by include guards
   - No function implementations inside headers (except templates)
+  - Test thoroughly for memory leaks using tools like `valgrind`.
 
 ## Orthodox Canonical Form
 
@@ -267,14 +268,6 @@ Each exercise produces its own executable. Navigate to the exercise directory an
 ```sh
 ./bsp
 ```
-
-## Submission and Peer Evaluation
-
-- Submit your project through the designated Git repository.
-- Only the files within your Git repository will be evaluated during defense.
-- Double-check that all file names and structures match the subject requirements.
-- Ensure your Makefile compiles without relinking and includes all required rules.
-- Verify that all classes follow the Orthodox Canonical Form.
 
 ## Acknowledgments
 
