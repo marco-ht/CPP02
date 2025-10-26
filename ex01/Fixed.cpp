@@ -6,11 +6,12 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 22:55:40 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/26 02:49:14 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/26 02:25:20 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cmath>
 #include "Fixed.hpp"
 
 const int   Fixed::P = 8;
@@ -60,7 +61,7 @@ Fixed::Fixed(const int i)
 Fixed::Fixed(const float f)
 {
     std::cout << "Float constructor called" << std::endl;
-    fp = (int)(f * (1 << P) + 0.5f);
+    fp = (int)roundf(f * (1 << P));
 }
 
 float Fixed::toFloat( void ) const
@@ -80,3 +81,9 @@ std::ostream& operator<<(std::ostream& os, const Fixed& obj)
 }
 
 
+
+/* std::cout << "f is " << f << std::endl;
+std::cout << "(1 << P) is " << (1 << P) << std::endl;
+std::cout << "(f * (1 << P)) is " << (f * (1 << P)) << std::endl;
+std::cout << "roundf(f * (1 << P) is " << roundf(f * (1 << P)) << std::endl;
+std::cout << "(int)roundf(f * (1 << P)) is " << (int)roundf(f * (1 << P)) << std::endl; */
