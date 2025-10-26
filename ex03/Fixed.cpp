@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 22:55:40 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/26 04:36:33 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/26 19:11:43 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,27 +87,27 @@ std::ostream& operator<<(std::ostream& os, const Fixed& obj)
 
 // comparison operators
 
-bool Fixed::operator>(const Fixed& other) {
+bool Fixed::operator>(const Fixed& other) const{
   return fp > other.fp;
 }
 
-bool Fixed::operator<(const Fixed& other) {
+bool Fixed::operator<(const Fixed& other) const{
   return fp < other.fp;
 }
 
-bool Fixed::operator>=(const Fixed& other) {
+bool Fixed::operator>=(const Fixed& other) const{
   return fp >= other.fp;
 }
 
-bool Fixed::operator<=(const Fixed& other) {
+bool Fixed::operator<=(const Fixed& other) const{
   return fp <= other.fp;
 }
 
-bool Fixed::operator==(const Fixed& other) {
+bool Fixed::operator==(const Fixed& other) const{
   return fp == other.fp;
 }
 
-bool Fixed::operator!=(const Fixed& other) {
+bool Fixed::operator!=(const Fixed& other) const{
   return !(*this == other);
 }
 

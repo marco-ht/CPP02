@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 04:41:57 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/26 04:54:48 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/26 19:22:38 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,12 @@ class Point
     Point(const Point &obj);
     Point& operator=(const Point& other);
     ~Point();
-}
+
+    bool operator==(const Point& other) const;
+
+    Fixed gx() const;
+    Fixed gy() const;
+};
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
 
